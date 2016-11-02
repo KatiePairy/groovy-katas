@@ -10,3 +10,12 @@ dependencies {
     testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
     testCompile 'junit:junit:4.12'
 }
+
+test {
+   testLogging {
+       exceptionFormat = 'full'
+       info {
+           events "passed", "failed", "skipped"
+       }
+   }
+}
